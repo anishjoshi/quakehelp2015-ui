@@ -1,9 +1,12 @@
-var apiurl = "http://parakhi.com.np/api"
+var apiurl = "http://quakehelp-env.elasticbeanstalk.com/quakeinfo"
 
 $(document).ready(function(){
 	console.log("ready");
+	getDataFromParam();
+	var district = null;
+	var category = null;
 
-	$.get(apiurl+"?task=categories", function(data, status){
+	$.get("http://parakhi.com.np/api?task=categories", function(data, status){
 		var categories = data.payload;
 
 		console.log(data.payload);	
@@ -16,46 +19,62 @@ $(document).ready(function(){
 
 	});
 
+	$(document).on('change', "#catfilterplace", function() {
+		console.log('called'+category);
+		$(".clickablepost").hide();
+		district = $(this).val();
+		if(category==null){
+			$('.'+district).show();
+		}else {
+			$('.'+district+'.catid-'+category).show();
+		}
+		
+	});
+
 	$(document).on('change', "#catfilter", function() {
-		$(".spinner").show();
-		var catid = $(this).val();
-	    $.get(apiurl+"?task=incidents&by=catid&id="+$(this).val(), function(data, status){
-		var incidents = data.payload;
-
-		console.log(data.payload);	
-
-		var source = $('#data-template').html();
-	    var template = Handlebars.compile(source);
-	    var context = incidents;
-
-	    $('#container').html(template(context));
-	    $(".spinner").hide();
+		console.log('called'+district);
+		category = $(this).val();
+		$(".clickablepost").hide();
+		if(district == null){
+			$('.catid-'+category).show();
+		}else {
+			console.log('.'+district+'.catid-'+category);
+			$('.'+district+'.catid-'+category).show();
+		}
 	    // $("#sharelink").val("http://anishjoshi.github.io/eqhelp/?catid="+catid);
 
 
-	});
+	
 	});
 	function getDataFromParam() {
-
-		console.log("wow");
 		var catid = getParameterByName('catid');
 		if(catid != ""){
+			console.log("wow");
 			$(".spinner").show();
-				    $.get(apiurl+"?task=incidents&by=catid&id="+catid, function(data, status){
-					var incidents = data.payload;
-
-					console.log(data.payload);	
+				    $.get(apiurl+"?categoryId="+catid, function(data, status){
+					var incidents = data;	
 
 					var source = $('#data-template').html();
 				    var template = Handlebars.compile(source);
 				    var context = incidents;
 
-				    $('#container').html(template(context));
+				    $('#data-incident').html(template(context));
 				    $(".spinner").hide();
 				    // $("#sharelink").val("http://anishjoshi.github.io/eqhelp/?catid="+catid);
 
 
 				});
+		}else {
+				$.get(apiurl, function(data, status){
+					var incidents = data;	
+
+					var source = $('#data-template').html();
+				    var template = Handlebars.compile(source);
+				    var context = incidents;
+
+				    $('#data-incident').html(template(context));
+				    $(".spinner").hide();
+				    });
 		}
 	}
 
@@ -66,5 +85,5 @@ function getParameterByName(name) {
     return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
-	getDataFromParam();	
+	
 });

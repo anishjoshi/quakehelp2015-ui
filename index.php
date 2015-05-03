@@ -93,7 +93,7 @@
 										 	<option value="Dhading">Dhading</option>
 										 	<option value="Dhankuta">Dhankuta</option>
 										 	<option value="Dhanusa">Dhanusa</option>
-										 	<option value="Dholkha">Dholkha</option>
+										 	<option value="Dolakha">Dolakha</option>
 										 	<option value="Dolpa">Dolpa</option>
 										 	<option value="Doti">Doti</option>
 										 	<option value="Gorkha">Gorkha</option>
@@ -178,7 +178,55 @@
 				  
 				</nav>
 			</script>
-			
+
+			<script id="data-template" type="text/x-handlebars-template">
+			{{#each incidents}}
+				<div class="post-block">
+				<a class="clickablepost {{incident.district}} {{#each categories}}catid-{{category.id}} {{/each}}" href="#"  data-toggle="modal" data-target="#modal-data{{incident.incidentid}}">
+					<div class="post">
+						<h4>{{incident.incidenttitle}}</h4>
+						<small>
+							<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> {{incident.locationname}}
+						</small>
+						<br>
+						<small>
+							<span class="glyphicon glyphicon-time" aria-hidden="true"></span> {{incident.incidentdate}}
+						</small>	
+					</div>
+				</a>
+					
+				<div class="modal fade" id="modal-data{{incident.incidentid}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-lg">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h4>{{incident.incidenttitle}}</h4>
+							</div>
+							<div class="modal-body">
+							<p><span class="glyphicon glyphicon-phone" aria-hidden="true"></span> 980884556</p>
+							
+							<p><small>
+								<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> {{incident.locationname}}
+							</small>
+							<br>
+							<small>
+								<span class="glyphicon glyphicon-time" aria-hidden="true"></span> {{incident.incidentdate}}
+							</small>
+							<br>
+							<small>
+								<span class="glyphicon glyphicon glyphicon-tags" aria-hidden="true"></span>  
+								{{#each categories}}
+						    		{{category.title}},
+						    	{{/each}}
+							</small></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{{/each}}	
+			<!-- END OF POST BLOCK -->			
+
+			</script>
 			<div id="filter">
 
 			</div>
@@ -192,113 +240,11 @@
 			<div class="box-title">
 				<h2><b>QuakeHelp 2015</b> - #NepQuake</h2>
 			</div><!-- site top -->
+			<div id="data-incident">
 
+			</div>
 			<!-- POST-BLOCK STARTS -->
-			<div class="post-block">
-				<a class="clickablepost" href="#"  data-toggle="modal" data-target="#modal-data1">
-					<div class="post">
-						<h4>Need of Food Supplies. Tents, Medical Service in villages in Gorkha</h4>
-						<small>
-							<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Gorkha, Gandaki, Western Region, Nepal
-						</small>
-						<br>
-						<small>
-							<span class="glyphicon glyphicon-time" aria-hidden="true"></span> 30 Apr 2015, 5:00 pm
-						</small>
-											
-										
-					</div>
-				</a>
-					
-				<div class="modal fade" id="modal-data1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-					<div class="modal-dialog modal-lg">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h4> quake details.</h4>
-							</div>
-							<div class="modal-body">
-							<p><span class="glyphicon glyphicon-phone" aria-hidden="true"></span> 980884556</p>
-							<iframe src="https://www.google.com/maps/api/js/widget?pb=!1m2!1u20!2s10!2sen-US#0-162" frameborder="0" allowtransparency="true" scrolling="no" style="border: 0px; overflow: hidden; height: 100%; width: 100%;"></iframe>
-							<p><small>
-								<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Gorkha, Gandaki, Western Region, Nepal
-							</small>
-							<br>
-							<small>
-								<span class="glyphicon glyphicon-time" aria-hidden="true"></span> 30 Apr 2015, 5:00 pm
-							</small>
-							<br>
-							<small>
-								<span class="glyphicon glyphicon glyphicon-tags" aria-hidden="true"></span>  Medical Facility, Camp, Medical Evacuation, Medical Assiatance, Food/Water/Shelter, Food/Water, Medical Team, Food, Water and Sanitation, Shelter, Other, Rescue
-							</small></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>	
-			<!-- END OF POST BLOCK -->		
-
-			<!-- POST-BLOCK STARTS -->
-			<div class="post-block">
-				<a class="clickablepost" href="#"  data-toggle="modal" data-target="#modal-data1">
-					<div class="post">
-						<h4>Urgent need for doctors in Melamchi</h4>
-						<small>
-							<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Melamchi, Bagmati, Central Region, Nepal
-						</small>
-						<br>
-						<small>
-							<span class="glyphicon glyphicon-time" aria-hidden="true"></span> 30 Apr 2015, 5:00 pm
-						</small>				
-										
-					</div>
-				</a>
-					
-				<div class="modal fade" id="modal-data1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-					<div class="modal-dialog modal-lg">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h4> quake details.</h4>
-							</div>
-							<div class="modal-body">
-							<p>hello this is content 1</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>	
-			<!-- END OF POST BLOCK -->		
-
-			<!-- POST-BLOCK STARTS -->
-			<div class="post-block">
-				<a class="clickablepost" href="#"  data-toggle="modal" data-target="#modal-data1">
-					<div class="post">
-						<h4>Requirement for relief at Rasuwa</h4>
-							<small>
-								<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Rasuwa, Sagarmatha, Eastern Region, Nepal, 56300
-							</small>
-							<br>
-							<small>
-								<span class="glyphicon glyphicon-time" aria-hidden="true"></span> 30 Apr 2015, 5:00 pm
-							</small>				
-										
-					</div>
-				</a>
-					
-				<div class="modal fade" id="modal-data1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-					<div class="modal-dialog modal-lg">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h4> quake details.</h4>
-							</div>
-							<div class="modal-body">
-							<p>hello this is content 1</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>	
-			<!-- END OF POST BLOCK -->		
-
+			
 		</div><!-- /col-md-6 -->
 
 		<div class="col-md-3 tweetbox">
