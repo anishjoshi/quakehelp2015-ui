@@ -52,7 +52,7 @@
 						</div>
 
 						<ul class="nav navbar-nav">
-							// Category
+							
 							<li class="filter-option">
 								<div class="form-label">Category</div>
 							    <form role="search">
@@ -67,7 +67,7 @@
 							    </form>
 							</li>
 
-							// district
+						
 							<li class="filter-option">
 								<div class="form-label">District</div>
 								<form role="search">
@@ -178,97 +178,7 @@
 				  
 				</nav>
 			</script>
-	        <!-- <nav class="collapse navbar-collapse" role="navigation">
-				<div class="box-title-filter collapse navbar-collapse">
-					<h4> Find By</h4>
-				</div>
-
-				<ul class="nav navbar-nav">
-
-					<li class="filter-option">
-						<div class="form-label">Category</div>
-						<form role="search">
-					        <div class="form-group">
-					        	<select id="catfilter">
-								 	<option value="0" selected>All</option>
-								 	<option value="1">Earthquake Damage</option>
-								 	
-								 	<option value="13">People Trapped</option>
-								 	
-								 	<option value="14">Blocked Roads</option>
-								 	
-								 	<option value="15">Shelter Area</option>
-								 	
-								 	<option value="2">Help Wanted</option>
-								 	
-								 	<option value="20">Distribution Area</option>
-								 	
-								 	<option value="21">Medical Evacuation</option>
-								 	
-								 	<option value="22">Medical Assiatance</option>
-								 	
-								 	<option value="23">Food/Water/Shelter</option>
-								 	
-								 	<option value="26">Medical Facility</option>
-								 	
-								 	<option value="27">Camp</option>
-								 	
-								 	<option value="28">Food/Water</option>
-								 	
-								 	<option value="29">Responding Organization</option>
-								 	
-								 	<option value="30">Medical Team</option>
-								 	
-								 	<option value="32" >Others</option>
-							 	
-								</select><i class="fa fa-spinner fa-spin spinner" style="display: none;"></i>
-					        </div>
-					    </form>
-						      
-					</li>
-					<li class="filter-option">
-						<div class="form-label">District</div>
-						<form role="search">
-					        <div class="form-group">
-						        <select id="catfilterplace">
-								 	<option value="0" selected>All</option>
-								 	<option value="1">Kathmandu</option>
-								 	
-								 	<option value="13">Gorkha</option>
-								 	
-								 	<option value="14">Sindhupalchowk</option>
-								 	
-								 		 	<option value="29">Lamjung</option>
-								 	
-								 	<option value="30">Kavre</option>
-								 	
-								 	<option value="32" >Dolakha</option>
-							 	
-							 	</select><i class="fa fa-spinner fa-spin spinner" style="display: none;"></i>
-					        </div>
-					    </form>
-						      
-					</li>
-
-
-
-					<li class="centered filter-option">
-						<h6>Data By</h6>
-						<a href="http://kathmandulivinglabs.org/earthquake/" target="_blank"><img src="assets/img/logo-kll.png"  width="100"></a>
-												
-												
-					</li>
-					<li class="centered filter-option">
-						<h6>Managed By</h6>
-						<a href="http://parakhi.com.np" target="_blank"><img src="assets/img/parakhilogo.png"  width="100"></a>
-								
-					</li>
-											
-					<li class="site-footer filter-option">
-						<p><a href="/">Home</a> | <a href="/contact">Contact</a> | <a href="#">Map</a> </p>
-					</li>
-				</ul>
-			</nav> -->
+			
 			<div id="filter">
 
 			</div>
