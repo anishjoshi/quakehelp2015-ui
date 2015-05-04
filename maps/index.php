@@ -14,13 +14,13 @@
       .navbar {
       	margin-bottom: 0px;
       }
-      .glyphicon-refresh{
-      	display: block;
-      	display: inline-block;
+      .navbar-brand {
+		  padding: 12px 15px;
+		}
+      .loader{
 				display: none;
 				margin-left: 10px;
 			}
-
 		.glyphicon-refresh-animate {
 		    -animation: spin .7s infinite linear;
 		    -webkit-animation: spin2 .7s infinite linear;
@@ -64,7 +64,7 @@
 		  var infowindow = new google.maps.InfoWindow();
 		  var gmarkers = [];
 		$(document).on('change', "#catfilter", function() {
-				$(".glyphicon-refresh").show();
+				$(".loader").show();
 				var catid = $(this).val();
 			    $.get(apiurl+"?task=incidents&by=catid&id="+$(this).val(), function(data, status){
 				var incidents = data.payload.incidents;
@@ -85,7 +85,7 @@
 				        }
 				      })(marker,incidents[i]));
 				 }
-				 $(".glyphicon-refresh").hide();
+				 $(".loader").hide();
 			});
 		});
 		  // var marker, i;
@@ -108,7 +108,8 @@
   		<nav class="navbar navbar-default">
 		  <div class="container-fluid">
 		    <div class="navbar-header">
-		      	<a class="navbar-brand" href="#">Help</a>
+		      	<!-- <a class="navbar-brand" href="#">Help</a> -->
+		      	<a class="navbar-brand" href="#"><img src="../assets/img/help.png"></a>
 
 		      <form class="navbar-form navbar-left" role="search">
 		        <div class="form-group">
@@ -118,7 +119,7 @@
 				 			<option value="{{category.id}}">{{category.title}}</option>
 				 	
 				 		{{/each}}
-			 		</select><i class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></i>
+			 		</select><span class="loader"><i class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></i></span>
 		        </div>
 		      </form>
 		    </div>
