@@ -4,9 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="http://www.blacktie.co/demo/feedo/assets/ico/favicon.ico">
+    <meta name="description" content="Quake help will let you know where reliefs are needed!">
+   
+     <!-- favicon -->
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
 
     <title>Quakehelp2015</title>
 
