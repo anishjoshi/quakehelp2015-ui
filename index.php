@@ -200,12 +200,9 @@
 								</li>
 														
 								<li class="site-footer filter-option">
-									<p><a href="/">Home</a> | <a href="/contact">Contact</a> | <a href="#">Map</a> </p>
+									<p><a href="/">Home</a> | <a href="/maps">Map</a> </p>
 								</li>
 							</ul>
-						    <ul class="nav navbar-nav navbar-right">
-					        	<li><a href="maps.html">Maps</a></li>
-					        </ul>
 					    
 					  	</div>
 					  

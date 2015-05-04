@@ -64,8 +64,12 @@
 		  var infowindow = new google.maps.InfoWindow();
 		  var gmarkers = [];
 		$(document).on('change', "#catfilter", function() {
-				$(".glyphicon-refresh").show();
+				
 				var catid = $(this).val();
+				if(catid!=""){
+
+				
+				$(".glyphicon-refresh").show();
 			    $.get(apiurl+"?task=incidents&by=catid&id="+$(this).val(), function(data, status){
 				var incidents = data.payload.incidents;
 				console.log(incidents);
@@ -87,6 +91,7 @@
 				 }
 				 $(".glyphicon-refresh").hide();
 			});
+			}
 		});
 		  // var marker, i;
 		  //  	  marker = new google.maps.Marker({
@@ -113,7 +118,7 @@
 		      <form class="navbar-form navbar-left" role="search">
 		        <div class="form-group">
 		          	<select id="catfilter" class="form-control">
-			 			<option value="" >choose</option>
+			 			<option value="" >Choose category first</option>
 				 		{{#each categories}}
 				 			<option value="{{category.id}}">{{category.title}}</option>
 				 	
