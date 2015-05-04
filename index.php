@@ -31,229 +31,235 @@
 <body>
 	
 	<div class="container">
-	<div class="row">
+		<div class="row">
+			<!-- pre loader -->
+			<div class="preloader-wrapper hide">
+				<div class="preloader-contain">
+					<span>
+						<i class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></i>
+					</span>
+				</div>
+			</div>
+			<!-- End of pre loader -->
+			<div class="col-md-3 floatboxfilter">
+				<div class="navbar-header">
+				    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				    </button>
+		    	</div>
 
-
-
-		<div class="col-md-3 floatboxfilter">
-			<div class="navbar-header">
-			    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-			        <span class="sr-only">Toggle navigation</span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			    </button>
-	    	</div>
-
-	    	<script id="data-filter" type="text/x-handlebars-template">
-				<nav class="collapse navbar-collapse" role="navigation">
-				  	<div class="box-title-filter collapse navbar-collapse">
-						<h4> Find By</h4>
-						</div>
-
-						<ul class="nav navbar-nav">
-							
-							<li class="filter-option">
-								<div class="form-label">Category</div>
-							    <form role="search">
-							        <div class="form-group">
-				        				<select id="catfilter">
-										 	<option value="" >Choose Category</option>
-											{{#each categories}}
-												<option value="{{category.id}}">{{category.title}}</option>
-											{{/each}}
-										</select><i class="fa fa-spinner fa-spin spinner"></i>
-							    	</div>
-							    </form>
-							</li>
-
-						
-							<li class="filter-option">
-								<div class="form-label">District</div>
-								<form role="search">
-							        <div class="form-group">
-								        <select id="catfilterplace">
-										 	<option value="All" selected>All</option>
-										 	<option value="Achham">Achham</option>
-										 	<option value="Arghakhanchi">Arghakhanchi</option>
-										 	<option value="Baglung">Baglung</option>
-										 	<option value="Baitadi">Baitadi</option>
-										 	<option value="Bajhang">Bajhang</option>
-										 	<option value="Bajura">Bajura</option>
-										 	<option value="Banke">Banke</option>
-										 	<option value="Bara">Bara</option>
-										 	<option value="Bardiya">Bardiya</option>
-										 	<option value="Bhaktapur">Bhaktapur</option>
-										 	<option value="Bhojpur">Bhojpur</option>
-										 	<option value="Chitwan">Chitwan</option>
-										 	<option value="Dadeldhura">Dadeldhura</option>
-										 	<option value="Dailekh">Dailekh</option>
-										 	<option value="Dang">Dang</option>
-										 	<option value="Darchula">Darchula</option>
-										 	<option value="Dhading">Dhading</option>
-										 	<option value="Dhankuta">Dhankuta</option>
-										 	<option value="Dhanusa">Dhanusa</option>
-										 	<option value="Dolakha">Dolakha</option>
-										 	<option value="Dolpa">Dolpa</option>
-										 	<option value="Doti">Doti</option>
-										 	<option value="Gorkha">Gorkha</option>
-										 	<option value="Gulmi">Gulmi</option>
-										 	<option value="Humla">Humla</option>
-										 	<option value="Ilam">Ilam</option>
-										 	<option value="Jajarkot">Jajarkot</option>
-										 	<option value="Jhapa">Jhapa</option>
-										 	<option value="Jumla">Jumla</option>
-										 	<option value="Kailali">Kailali</option>
-										 	<option value="Kalikot">Kalikot</option>
-										 	<option value="Kanchanpur">Kanchanpur</option>
-										 	<option value="Kapilvastu">Kapilvastu</option>
-										 	<option value="Kaski">Kaski</option>
-										 	<option value="Kathmandu">Kathmandu</option>
-										 	<option value="Kavrepalanchok">Kavrepalanchok</option>
-										 	<option value="Khotang">Khotang</option>
-										 	<option value="Lalitpur">Lalitpur</option>
-										 	<option value="Lamjung">Lamjung</option>
-										 	<option value="Mahottari">Mahottari</option>
-										 	<option value="Makwanpur">Makwanpur</option>
-										 	<option value="Manang">Manang</option>
-										 	<option value="Morang">Morang</option>
-										 	<option value="Mugu">Mugu</option>
-										 	<option value="Mustang">Mustang</option>
-										 	<option value="Myagdi">Myagdi</option>
-										 	<option value="Nawalparasi">Nawalparasi</option>
-										 	<option value="Nuwakot">Nuwakot</option>
-										 	<option value="Okhaldhunga">Okhaldhunga</option>
-										 	<option value="Palpa">Palpa</option>
-										 	<option value="Panchthar">Panchthar</option>
-										 	<option value="Parbat">Parbat</option>
-										 	<option value="Parsa">Parsa</option>
-										 	<option value="Pyuthan">Pyuthan</option>
-										 	<option value="Ramechhap">Ramechhap</option>
-										 	<option value="Rasuwa">Rasuwa</option>
-										 	<option value="Rautahat">Rautahat</option>
-										 	<option value="Rolpa">Rolpa</option>
-										 	<option value="Rukum">Rukum</option>
-										 	<option value="Rupandehi">Rupandehi</option>
-										 	<option value="Salyan">Salyan</option>
-										 	<option value="Sankhuwasabha">Sankhuwasabha</option>
-										 	<option value="Saptari">Saptari</option>
-										 	<option value="Sarlahi">Sarlahi</option>
-										 	<option value="Sindhuli">Sindhuli</option>
-										 	<option value="Sindhupalchok">Sindhupalchok</option>
-										 	<option value="Siraha">Siraha</option>
-										 	<option value="Solukhumbu">Solukhumbu</option>
-										 	<option value="Sunsari">Sunsari</option>
-										 	<option value="Surkhet">Surkhet</option>
-										 	<option value="Syangja">Syangja</option>
-										 	<option value="Tanahu">Tanahu</option>
-										 	<option value="Taplejung">Taplejung</option>
-										 	<option value="Terhathum">Terhathum</option>
-										 	<option value="Udayapur">Udayapur</option>
-									 	
-									 	</select><i class="fa fa-spinner fa-spin spinner" style="display: none;"></i>
-							        </div>
-							    </form>
-								      
-							</li>
-
-							<li class="centered filter-option">
-								<h6>Data By</h6>
-								<a href="http://kathmandulivinglabs.org/earthquake/" target="_blank"><img src="assets/img/logo-kll.png"  width="100"></a>
-							</li>
-							<li class="centered filter-option">
-								<h6>Managed By</h6>
-								<a href="http://parakhi.com.np" target="_blank"><img src="assets/img/parakhilogo.png"  width="100"></a>
-										
-							</li>
-													
-							<li class="site-footer filter-option">
-								<p><a href="/">Home</a> | <a href="/contact">Contact</a> | <a href="#">Map</a> </p>
-							</li>
-						</ul>
-					    <ul class="nav navbar-nav navbar-right">
-				        	<li><a href="maps.html">Maps</a></li>
-				        </ul>
-				    
-				  	</div>
-				  
-				</nav>
-			</script>
-
-			<script id="data-template" type="text/x-handlebars-template">
-			{{#each incidents}}
-				<div class="post-block">
-				<a class="clickablepost {{incident.district}} {{#each categories}}catid-{{category.id}} {{/each}}" href="#"  data-toggle="modal" data-target="#modal-data{{incident.incidentid}}">
-					<div class="post">
-						<h4>{{incident.incidenttitle}}</h4>
-						<small>
-							<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> {{incident.locationname}}
-						</small>
-						<br>
-						<small>
-							<span class="glyphicon glyphicon-time" aria-hidden="true"></span> {{incident.incidentdate}}
-						</small>	
-					</div>
-				</a>
-					
-				<div class="modal fade" id="modal-data{{incident.incidentid}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-					<div class="modal-dialog modal-lg">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h4>{{incident.incidenttitle}}</h4>
+		    	<script id="data-filter" type="text/x-handlebars-template">
+					<nav class="collapse navbar-collapse" role="navigation">
+					  	<div class="box-title-filter collapse navbar-collapse">
+							<h4> Find By</h4>
 							</div>
-							<div class="modal-body">
-							<p><span class="glyphicon glyphicon-phone" aria-hidden="true"></span> 980884556</p>
+
+							<ul class="nav navbar-nav">
+								
+								<li class="filter-option">
+									<div class="form-label">Category</div>
+								    <form role="search">
+								        <div class="form-group">
+					        				<select id="catfilter">
+											 	<option value="" >Choose Category</option>
+												{{#each categories}}
+													<option value="{{category.id}}">{{category.title}}</option>
+												{{/each}}
+											</select><i class="fa fa-spinner fa-spin spinner"></i>
+								    	</div>
+								    </form>
+								</li>
+
 							
-							<p><small>
+								<li class="filter-option">
+									<div class="form-label">District</div>
+									<form role="search">
+								        <div class="form-group">
+									        <select id="catfilterplace">
+											 	<option value="All" selected>All</option>
+											 	<option value="Achham">Achham</option>
+											 	<option value="Arghakhanchi">Arghakhanchi</option>
+											 	<option value="Baglung">Baglung</option>
+											 	<option value="Baitadi">Baitadi</option>
+											 	<option value="Bajhang">Bajhang</option>
+											 	<option value="Bajura">Bajura</option>
+											 	<option value="Banke">Banke</option>
+											 	<option value="Bara">Bara</option>
+											 	<option value="Bardiya">Bardiya</option>
+											 	<option value="Bhaktapur">Bhaktapur</option>
+											 	<option value="Bhojpur">Bhojpur</option>
+											 	<option value="Chitwan">Chitwan</option>
+											 	<option value="Dadeldhura">Dadeldhura</option>
+											 	<option value="Dailekh">Dailekh</option>
+											 	<option value="Dang">Dang</option>
+											 	<option value="Darchula">Darchula</option>
+											 	<option value="Dhading">Dhading</option>
+											 	<option value="Dhankuta">Dhankuta</option>
+											 	<option value="Dhanusa">Dhanusa</option>
+											 	<option value="Dolakha">Dolakha</option>
+											 	<option value="Dolpa">Dolpa</option>
+											 	<option value="Doti">Doti</option>
+											 	<option value="Gorkha">Gorkha</option>
+											 	<option value="Gulmi">Gulmi</option>
+											 	<option value="Humla">Humla</option>
+											 	<option value="Ilam">Ilam</option>
+											 	<option value="Jajarkot">Jajarkot</option>
+											 	<option value="Jhapa">Jhapa</option>
+											 	<option value="Jumla">Jumla</option>
+											 	<option value="Kailali">Kailali</option>
+											 	<option value="Kalikot">Kalikot</option>
+											 	<option value="Kanchanpur">Kanchanpur</option>
+											 	<option value="Kapilvastu">Kapilvastu</option>
+											 	<option value="Kaski">Kaski</option>
+											 	<option value="Kathmandu">Kathmandu</option>
+											 	<option value="Kavrepalanchok">Kavrepalanchok</option>
+											 	<option value="Khotang">Khotang</option>
+											 	<option value="Lalitpur">Lalitpur</option>
+											 	<option value="Lamjung">Lamjung</option>
+											 	<option value="Mahottari">Mahottari</option>
+											 	<option value="Makwanpur">Makwanpur</option>
+											 	<option value="Manang">Manang</option>
+											 	<option value="Morang">Morang</option>
+											 	<option value="Mugu">Mugu</option>
+											 	<option value="Mustang">Mustang</option>
+											 	<option value="Myagdi">Myagdi</option>
+											 	<option value="Nawalparasi">Nawalparasi</option>
+											 	<option value="Nuwakot">Nuwakot</option>
+											 	<option value="Okhaldhunga">Okhaldhunga</option>
+											 	<option value="Palpa">Palpa</option>
+											 	<option value="Panchthar">Panchthar</option>
+											 	<option value="Parbat">Parbat</option>
+											 	<option value="Parsa">Parsa</option>
+											 	<option value="Pyuthan">Pyuthan</option>
+											 	<option value="Ramechhap">Ramechhap</option>
+											 	<option value="Rasuwa">Rasuwa</option>
+											 	<option value="Rautahat">Rautahat</option>
+											 	<option value="Rolpa">Rolpa</option>
+											 	<option value="Rukum">Rukum</option>
+											 	<option value="Rupandehi">Rupandehi</option>
+											 	<option value="Salyan">Salyan</option>
+											 	<option value="Sankhuwasabha">Sankhuwasabha</option>
+											 	<option value="Saptari">Saptari</option>
+											 	<option value="Sarlahi">Sarlahi</option>
+											 	<option value="Sindhuli">Sindhuli</option>
+											 	<option value="Sindhupalchok">Sindhupalchok</option>
+											 	<option value="Siraha">Siraha</option>
+											 	<option value="Solukhumbu">Solukhumbu</option>
+											 	<option value="Sunsari">Sunsari</option>
+											 	<option value="Surkhet">Surkhet</option>
+											 	<option value="Syangja">Syangja</option>
+											 	<option value="Tanahu">Tanahu</option>
+											 	<option value="Taplejung">Taplejung</option>
+											 	<option value="Terhathum">Terhathum</option>
+											 	<option value="Udayapur">Udayapur</option>
+										 	
+										 	</select><i class="fa fa-spinner fa-spin spinner" style="display: none;"></i>
+								        </div>
+								    </form>
+									      
+								</li>
+
+								<li class="centered filter-option">
+									<h6>Data By</h6>
+									<a href="http://kathmandulivinglabs.org/earthquake/" target="_blank"><img src="assets/img/logo-kll.png"  width="100"></a>
+								</li>
+								<li class="centered filter-option">
+									<h6>Managed By</h6>
+									<a href="http://parakhi.com.np" target="_blank"><img src="assets/img/parakhilogo.png"  width="100"></a>
+											
+								</li>
+														
+								<li class="site-footer filter-option">
+									<p><a href="/">Home</a> | <a href="/contact">Contact</a> | <a href="#">Map</a> </p>
+								</li>
+							</ul>
+						    <ul class="nav navbar-nav navbar-right">
+					        	<li><a href="maps.html">Maps</a></li>
+					        </ul>
+					    
+					  	</div>
+					  
+					</nav>
+				</script>
+
+				<script id="data-template" type="text/x-handlebars-template">
+				{{#each incidents}}
+					<div class="post-block">
+					<a class="clickablepost {{incident.district}} {{#each categories}}catid-{{category.id}} {{/each}}" href="#"  data-toggle="modal" data-target="#modal-data{{incident.incidentid}}">
+						<div class="post">
+							<h4>{{incident.incidenttitle}}</h4>
+							<small>
 								<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> {{incident.locationname}}
 							</small>
 							<br>
 							<small>
 								<span class="glyphicon glyphicon-time" aria-hidden="true"></span> {{incident.incidentdate}}
-							</small>
-							<br>
-							<small>
-								<span class="glyphicon glyphicon glyphicon-tags" aria-hidden="true"></span>  
-								{{#each categories}}
-						    		{{category.title}},
-						    	{{/each}}
-							</small></p>
+							</small>	
+						</div>
+					</a>
+						
+					<div class="modal fade" id="modal-data{{incident.incidentid}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h4>{{incident.incidenttitle}}</h4>
+								</div>
+								<div class="modal-body">
+								<p><span class="glyphicon glyphicon-phone" aria-hidden="true"></span> 980884556</p>
+								
+								<p><small>
+									<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> {{incident.locationname}}
+								</small>
+								<br>
+								<small>
+									<span class="glyphicon glyphicon-time" aria-hidden="true"></span> {{incident.incidentdate}}
+								</small>
+								<br>
+								<small>
+									<span class="glyphicon glyphicon glyphicon-tags" aria-hidden="true"></span>  
+									{{#each categories}}
+							    		{{category.title}},
+							    	{{/each}}
+								</small></p>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+				{{/each}}	
+				<!-- END OF POST BLOCK -->			
+
+				</script>
+				<div id="filter">
+
+				</div>
 			</div>
-			{{/each}}	
-			<!-- END OF POST BLOCK -->			
 
-			</script>
-			<div id="filter">
+			<!-- END OF FLOATBOXFILTER -->
 
-			</div>
-		</div>
+			<div class="col-md-6 site">
+					
+					
+				<div class="box-title">
+					<h2><b>QuakeHelp 2015</b> - #NepQuake</h2>
+				</div><!-- site top -->
+				<div id="data-incident">
 
-		<!-- END OF FLOATBOXFILTER -->
-
-		<div class="col-md-6 site">
+				</div>
+				<!-- POST-BLOCK STARTS -->
 				
-				
-			<div class="box-title">
-				<h2><b>QuakeHelp 2015</b> - #NepQuake</h2>
-			</div><!-- site top -->
-			<div id="data-incident">
+			</div><!-- /col-md-6 -->
 
+			<div class="col-md-3 tweetbox">
+				<a class="twitter-timeline" href="https://twitter.com/search?q=%23nepalQuake%20OR%20%23EarthquakeNepal%20OR%20%23NepalEarthquake" data-widget-id="594451247190528000">Tweets about #nepalQuake</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 			</div>
-			<!-- POST-BLOCK STARTS -->
-			
-		</div><!-- /col-md-6 -->
-
-		<div class="col-md-3 tweetbox">
-			<a class="twitter-timeline" href="https://twitter.com/search?q=%23nepalQuake%20OR%20%23EarthquakeNepal%20OR%20%23NepalEarthquake" data-widget-id="594451247190528000">Tweets about #nepalQuake</a>
-			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-		</div>
 
 
-	</div><!-- --/row ---->
+		</div><!-- --/row ---->
 	</div><!-- --/container ---->
 		        
 
