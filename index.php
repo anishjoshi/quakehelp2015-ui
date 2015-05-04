@@ -19,7 +19,7 @@
 <meta name="twitter:title" content="QuakeHelp Nepal 2015">
 <meta name="twitter:description" content="Quake help will let you know where reliefs are needed!">
 <meta name="twitter:creator" content="@theparakhi">
-<-- Twitter Summary card images must be at least 120x120px -->
+<!-- Twitter Summary card images must be at least 120x120px -->
 <meta name="twitter:image" content="http://quakehelp.parakhi.com.np/assets/img/img.jpg">
 
 <!-- Open Graph data -->
