@@ -1,15 +1,41 @@
 <!DOCTYPE html>
 <!-- saved from url=(0034)http://www.blacktie.co/demo/feedo/ -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en" itemscope itemtype="http://schema.org/Event"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+<title>Quakehelp Nepal 2015</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Quake help will let you know where reliefs are needed!">
-   
+   <!-- google meta -->
+<meta itemprop="name" content="Quake Help Nepal 2015">
+<meta itemprop="description" content="Get information on relief programs and places where reliefs are most needed.">
+<meta itemprop="image" content="http://quakehelp.parakhi.com.np/assets/img/img.jpg">
+
+
+<!-- Twitter Card data -->
+<meta name="twitter:card" content="QuakeHelp Nepal 2015">
+<meta name="twitter:site" content="@theparakhi">
+<meta name="twitter:title" content="QuakeHelp Nepal 2015">
+<meta name="twitter:description" content="Quake help will let you know where reliefs are needed!">
+<meta name="twitter:creator" content="@theparakhi">
+<-- Twitter Summary card images must be at least 120x120px -->
+<meta name="twitter:image" content="http://quakehelp.parakhi.com.np/assets/img/img.jpg">
+
+<!-- Open Graph data -->
+<meta property="og:title" content="QuakeHelp Nepal 2015" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://quakehelp.parakhi.com.np/" />
+<meta property="og:image" content="http://quakehelp.parakhi.com.np/assets/img/img.jpg" />
+<meta property="og:description" content="Quake help will let you know where reliefs are needed!" /> 
+<meta property="og:site_name" content="Parakhi Relief Team" />
+<meta property="fb:admins" content="112050358881139" />
+
+
      <!-- favicon -->
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
 
-    <title>Quakehelp2015</title>
+    
 
     
     <!-- Bootstrap core CSS -->
@@ -253,7 +279,7 @@
 					
 					
 				<div class="box-title">
-					<h2><b>QuakeHelp 2015</b> - #NepQuake</h2>
+					<h2><b>QuakeHelp 2015</b></h2>
 				</div><!-- site top -->
 				<div id="data-incident">
 
