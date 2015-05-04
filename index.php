@@ -208,7 +208,7 @@
 									<h4>{{incident.incidenttitle}}</h4>
 								</div>
 								<div class="modal-body">
-								<p><span class="glyphicon glyphicon-phone" aria-hidden="true"></span> 980884556</p>
+								<p><span class="glyphicon glyphicon-phone" aria-hidden="true"></span> {{customfields.2.field_response}}</p>
 								
 								<p><small>
 									<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> {{incident.locationname}}
