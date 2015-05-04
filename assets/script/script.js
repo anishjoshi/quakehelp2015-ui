@@ -29,7 +29,7 @@ $(document).ready(function(){
 			$('.'+category).show();
 		}
 		else {
-			if(category==null){
+			if(category==null || category == "All"){
 				$('.'+district).show();
 			}else {
 				$('.'+district+'.catid-'+category).show();
@@ -57,7 +57,7 @@ $(document).ready(function(){
 		}
 		else {
 			$(".clickablepost").hide();
-			if(district == null){
+			if(district == null || district == "All"){
 				$('.catid-'+category).show();
 			}else {
 				console.log('.'+district+'.catid-'+category);
@@ -66,8 +66,8 @@ $(document).ready(function(){
 		}
 
 		var visiblecontent = $('.clickablepost').filter(function() {
-  return $(this).css('display') !== 'none';
-}).length;
+		  return $(this).css('display') !== 'none';
+		}).length;
 		if(visiblecontent<1){
 			$('.nodata').show();
 		}else {
