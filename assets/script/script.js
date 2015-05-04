@@ -23,7 +23,7 @@ $(document).ready(function(){
 		console.log('called'+category);
 		$(".clickablepost").hide();
 		district = $(this).val();
-		if(district == "All" && category == null){
+		if(district == "All" && (category == null||category == "All")){
 			$(".clickablepost").show();
 		}else if(district == "All"){
 			$('.'+category).show();
@@ -50,7 +50,7 @@ $(document).ready(function(){
 	$(document).on('change', "#catfilter", function() {
 		console.log('called'+district);
 		category = $(this).val();
-		if(category == "All" && district == null){
+		if(category == "All" && (district == null||district == "All")){
 			$(".clickablepost").show();
 		}else if(category == "All"){
 			$('.'+district).show();
