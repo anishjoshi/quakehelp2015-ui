@@ -35,6 +35,15 @@ $(document).ready(function(){
 				$('.'+district+'.catid-'+category).show();
 			}
 		}
+
+		var visiblecontent = $('.clickablepost').filter(function() {
+  return $(this).css('display') !== 'none';
+}).length;
+		if(visiblecontent<1){
+			$('.nodata').show();
+		}else {
+			$('.nodata').hide();
+		}
 		
 	});
 
@@ -54,6 +63,15 @@ $(document).ready(function(){
 				console.log('.'+district+'.catid-'+category);
 				$('.'+district+'.catid-'+category).show();
 			}
+		}
+
+		var visiblecontent = $('.clickablepost').filter(function() {
+  return $(this).css('display') !== 'none';
+}).length;
+		if(visiblecontent<1){
+			$('.nodata').show();
+		}else {
+			$('.nodata').hide();
 		}
 		
 	    // $("#sharelink").val("http://anishjoshi.github.io/eqhelp/?catid="+catid);

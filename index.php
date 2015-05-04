@@ -208,7 +208,7 @@
 									<h4>{{incident.incidenttitle}}</h4>
 								</div>
 								<div class="modal-body">
-								<p><span class="glyphicon glyphicon-phone" aria-hidden="true"></span> {{customfields.2.field_response}}</p>
+								<p><span class="glyphicon glyphicon-phone" aria-hidden="true"></span> {{jqejcustomfields.2.field_response}}</p>
 								
 								<p><small>
 									<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> {{incident.locationname}}
@@ -230,7 +230,15 @@
 					</div>
 				</div>
 				{{/each}}	
-				<!-- END OF POST BLOCK -->			
+				<!-- END OF POST BLOCK -->	
+
+				<div class="post-block">
+					<a class="clickablepost nodata" href="#" style="display:none"  data-toggle="modal" data-target="#modal-data">
+						<div class="post">
+							<h4>No incident found</h4>
+						</div>
+					</a>
+				</div>		
 
 				</script>
 				<div id="filter">
