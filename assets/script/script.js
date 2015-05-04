@@ -23,10 +23,17 @@ $(document).ready(function(){
 		console.log('called'+category);
 		$(".clickablepost").hide();
 		district = $(this).val();
-		if(category==null){
-			$('.'+district).show();
-		}else {
-			$('.'+district+'.catid-'+category).show();
+		if(district == "All" && category == null){
+			$(".clickablepost").show();
+		}else if(district == "All"){
+			$('.'+category).show();
+		}
+		else {
+			if(category==null){
+				$('.'+district).show();
+			}else {
+				$('.'+district+'.catid-'+category).show();
+			}
 		}
 		
 	});
@@ -34,13 +41,21 @@ $(document).ready(function(){
 	$(document).on('change', "#catfilter", function() {
 		console.log('called'+district);
 		category = $(this).val();
-		$(".clickablepost").hide();
-		if(district == null){
-			$('.catid-'+category).show();
-		}else {
-			console.log('.'+district+'.catid-'+category);
-			$('.'+district+'.catid-'+category).show();
+		if(category == "All" && district == null){
+			$(".clickablepost").show();
+		}else if(category == "All"){
+			$('.'+district).show();
 		}
+		else {
+			$(".clickablepost").hide();
+			if(district == null){
+				$('.catid-'+category).show();
+			}else {
+				console.log('.'+district+'.catid-'+category);
+				$('.'+district+'.catid-'+category).show();
+			}
+		}
+		
 	    // $("#sharelink").val("http://anishjoshi.github.io/eqhelp/?catid="+catid);
 
 
@@ -73,7 +88,7 @@ $(document).ready(function(){
 				    var context = incidents;
 
 				    $('#data-incident').html(template(context));
-				    $(".spinner").hide();
+				    $(".preloader-wrapper").hide();
 				    });
 		}
 	}
