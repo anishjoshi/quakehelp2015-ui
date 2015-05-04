@@ -21,6 +21,7 @@
 				display: none;
 				margin-left: 10px;
 			}
+
 		.glyphicon-refresh-animate {
 		    -animation: spin .7s infinite linear;
 		    -webkit-animation: spin2 .7s infinite linear;
@@ -114,18 +115,19 @@
   		<nav class="navbar navbar-default">
 		  <div class="container-fluid">
 		    <div class="navbar-header">
-		      	<!-- <a class="navbar-brand" href="#">Help</a> -->
-		      	<a class="navbar-brand" href="#"><img src="../assets/img/help.png"></a>
+
+		      <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-circle-arrow-left"></span></a>
 
 		      <form class="navbar-form navbar-left" role="search">
 		        <div class="form-group">
-		          	<select id="catfilter" class="form-control">
-			 			<option value="" >Choose category first</option>
-				 		{{#each categories}}
-				 			<option value="{{category.id}}">{{category.title}}</option>
-				 	
-				 		{{/each}}
-			 		</select><span class="loader"><i class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></i></span>
+		          <select id="catfilter" class="form-control">
+			 	<option value="" >choose</option>
+			 {{#each categories}}
+			 	<option value="{{category.id}}">{{category.title}}</option>
+			 	
+			 {{/each}}
+			 </select><span class="loader"><span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span></span>
+			 
 		        </div>
 		      </form>
 		    </div>
