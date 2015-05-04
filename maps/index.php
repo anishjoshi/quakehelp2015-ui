@@ -14,9 +14,27 @@
       .navbar {
       	margin-bottom: 0px;
       }
-      .spinner{
-				display: none;
-			}
+      .navbar-brand {
+		  padding: 12px 15px;
+		}
+      .loader {
+		  display: none;
+		  margin-left: 10px;
+		}
+		.glyphicon-refresh-animate {
+		    -animation: spin .7s infinite linear;
+		    -webkit-animation: spin2 .7s infinite linear;
+		}
+
+		@-webkit-keyframes spin2 {
+		    from { -webkit-transform: rotate(0deg);}
+		    to { -webkit-transform: rotate(360deg);}
+		}
+
+		@keyframes spin {
+		    from { transform: scale(1) rotate(0deg);}
+		    to { transform: scale(1) rotate(360deg);}
+		}
     </style>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -46,7 +64,7 @@
 		  var infowindow = new google.maps.InfoWindow();
 		  var gmarkers = [];
 		$(document).on('change', "#catfilter", function() {
-				$(".spinner").show();
+				$(".loader").show();
 				var catid = $(this).val();
 			    $.get(apiurl+"?task=incidents&by=catid&id="+$(this).val(), function(data, status){
 				var incidents = data.payload.incidents;
@@ -67,7 +85,7 @@
 				        }
 				      })(marker,incidents[i]));
 				 }
-				 $(".spinner").hide();
+				 $(".loader").hide();
 			});
 		});
 		  // var marker, i;
@@ -90,19 +108,17 @@
   	<nav class="navbar navbar-default">
 		  <div class="container-fluid">
 		    <div class="navbar-header">
-		      <a class="navbar-brand" href="#">
-		       	Help
-		      </a>
+		      <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-circle-arrow-left"></span></a>
 
 		      <form class="navbar-form navbar-left" role="search">
 		        <div class="form-group">
-		          <select id="catfilter">
+		          <select id="catfilter" class="form-control">
 			 	<option value="" >choose</option>
 			 {{#each categories}}
 			 	<option value="{{category.id}}">{{category.title}}</option>
 			 	
 			 {{/each}}
-			 </select><i class="fa fa-spinner fa-spin spinner"></i>
+			 </select><span class="loader"><span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span></span>
 		        </div>
 		      </form>
 		    </div>
