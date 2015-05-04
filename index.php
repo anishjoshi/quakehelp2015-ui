@@ -232,6 +232,7 @@
 									<h4>{{incident.incidenttitle}}</h4>
 								</div>
 								<div class="modal-body">
+								{{{incident.incidentdescription}}}
 								<p><span class="glyphicon glyphicon-phone" aria-hidden="true"></span> {{jqejcustomfields.2.field_response}}</p>
 								
 								<p><small>
