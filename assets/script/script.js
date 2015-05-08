@@ -6,7 +6,7 @@ $(document).ready(function(){
 	var district = null;
 	var category = null;
 
-	$.get("http://parakhi.com.np/api?task=categories", function(data, status){
+	$.get("http://quakehelp-env.elasticbeanstalk.com/quakecategoryinfo", function(data, status){
 		var categories = data.payload;
 
 		console.log(data.payload);	
